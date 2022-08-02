@@ -11,7 +11,7 @@ def define_env(env):
         the matching release in github.
         """
         version = os.environ.get("KNATIVE_VERSION")
-        if version == None:
+        if version is None:
             return 'https://storage.googleapis.com/{org}-nightly/{repo}/latest/{file}'.format(
                     repo=repo,
                     file=file,
